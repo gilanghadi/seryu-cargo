@@ -1,4 +1,5 @@
 ## How To Setup
+<p>Buat file .env pada root folder project jika file tersebut belum ada.</p>
 
 ### Copy dan Paste value berikut pada file .env :
 - **APP_PORT=3000**
