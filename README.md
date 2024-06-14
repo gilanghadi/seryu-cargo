@@ -4,8 +4,8 @@
 ### Copy dan Paste value berikut pada file .env :
 - **APP_PORT=3000**
 - **DEV_DB_DATABASE=recruitment-seryu**
-- **DEV_DB_USERNAME=your-db-username** // Isi dengan username database anda
-- **DEV_DB_PASSWORD=your-db-password** // Isi dengan password database anda
+- **DEV_DB_USERNAME=your-db-username-postgres**
+- **DEV_DB_PASSWORD=your-db-password-postgres**
 
 ### How to running project
 - Jalankan npm install
