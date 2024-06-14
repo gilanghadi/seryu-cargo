@@ -4,7 +4,7 @@ import VariableConfig from '../db/models/VariableConfig'
 import Driver from '../db/models/Driver'
 import { QueryTypes } from 'sequelize'
 
-const getSalaryDriver = async (req: Request, res: Response) => {
+const getSalaryDriver = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { month, year, current, page_size } = req.query
     const limit = page_size ? parseInt(page_size as string) : 10
@@ -58,7 +58,7 @@ const getSalaryDriver = async (req: Request, res: Response) => {
 
     const totalDrivers = await Driver.count()
 
-    res.status(200).json({
+    return res.status(200).json({
       data: drivers,
       total_row: totalDrivers,
       current: offset,
@@ -66,7 +66,7 @@ const getSalaryDriver = async (req: Request, res: Response) => {
     })
   } catch (error) {
     console.error('Error fetching driver salary list:', error)
-    res.status(500).json({ message: 'Internal server error' })
+    return res.status(500).json({ message: 'Internal server error' })
   }
 }
 
